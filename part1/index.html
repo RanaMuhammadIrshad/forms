@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- 
+          method can be either GET or POST
+          GET will append values int he URL.. POST will not.
+          Do not use GET for sensitive data.
+    -->
+    <form action="https://formspree.io/f/xdoyeybn" method="POST">
+      <div>
+        <!-- our input needs to have a UNIQUE "name" attr for data to be sent to the server (type radio and checkbox behave differently)-->
+        <!-- in order to bind label and input together the attributes "for" and "id" need to have the same value -->
+        <label for="firstName">Firstname</label>
+        <input
+          id="firstName"
+          type="text"
+          name="name"
+          value=""
+          placeholder="John"
+          required
+        />
+        <!-- placeholder is mostly used as a suggestion to the user -->
+        <!-- required is used to make an input mandatory -->
+      </div>
+
+      <div>
+        <label for="lastName">Lastname</label>
+        <input
+          id="lastName"
+          type="text"
+          name="lastName"
+          value=""
+          placeholder="Smith"
+        />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" value="" />
+        <!-- type "email" adds some basic email validation -->
+      </div>
+
+      <fieldset>
+        <!-- fieldset is an optional element used to group fields together -->
+        <legend>Programming experience</legend>
+
+        <p>Please select your fav programming language (RADIO)</p>
+        <div>
+          <!-- type radio lets you pick only 1 choice -->
+          <input
+            id="javascript"
+            type="radio"
+            name="language"
+            value="javascript"
+            checked
+          />
+          <label for="javascript">Javascript</label>
+        </div>
+
+        <div>
+          <input id="java" type="radio" name="language" value="java" />
+          <label for="java">Java</label>
+        </div>
+
+        <div>
+          <input id="php" type="radio" name="language" value="php" />
+          <label for="php">PHP</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What career are you considering? (CHECKBOX)</legend>
+        <!-- type checkbox allows you to select multiple items -->
+
+        <input
+          id="career-web-dev"
+          type="checkbox"
+          name="career"
+          value="web-developer"
+        />
+        <label for="career-web-dev">Web Dev</label><br />
+
+        <input id="BE" type="checkbox" name="career" value="backend-dev" />
+        <label for="BE">Backend Dev</label><br />
+
+        <input id="sysadm" type="checkbox" name="career" value="system-admin" />
+        <label for="sysadm">System admin</label>
+      </fieldset>
+
+      <label for="reference">How did you find us? (SELECT)</label><br />
+      <select id="reference" name="referenceText">
+        <!-- dropdown menu -->
+        <!-- select contains a list of options -->
+        <option value="internet">internet</option>
+        <option value="tv">Tv</option>
+        <option value="social" selected>Social media</option>
+        <!-- the attribute selected makes that specific option the default one -->
+      </select>
+      <br />
+
+      <label for="extraInfo"
+        >Give us some more details about your experience</label
+      >
+      <!-- you can modify cols and rows to have a larger textarea -->
+      <!-- you can also add maxlength to limit the amount of chars -->
+      <textarea
+        name="experience"
+        id="extraInfo"
+        cols="30"
+        rows="5"
+        maxlength="10"
+        placeholder="Add extra info here..."
+      ></textarea>
+      <br />
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f2dfbb;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
+}
+
+.newForm {
+  width: 40%;
+  min-width: 400px;
+  border-radius: 10px;
+  background-color: #0f374f;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.newForm legend {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.newForm fieldset {
+  background-color: #96b9d9;
+  border-radius: 15px;
+  border: 0;
+}
+
+.newForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.newForm input {
+  width: 100%;
+  border-radius: 10px;
+  border: 0;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.newForm button {
+  width: 100%;
+  border-radius: 10px;
+  border: 0;
+  padding: 0.5rem 1rem;
+  background-color: #5c548c;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.newForm select {
+  width: 100%;
+  padding: 7px;
+  border-radius: 10px;
+  border: 0;
+}
+
+.newForm-upload {
+  background-color: #b2bf80;
+  border-radius: 15px;
+  margin-top: 10px;
+  padding: 0 0.5rem;
+}
+
+/* Add yellow background on focus */
+
+.newForm input:focus,
+.newForm select:focus {
+  background-color: #f0e68c;
+}
+
+/* :invalid to style form elements failing validation */
+
+.newForm input:invalid {
+  border: 3px solid #d98f8f;
+}
+
+/* styling placeholder text */
+
+.newForm input::placeholder {
+  color: purple;
+}
